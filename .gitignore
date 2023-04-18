@@ -1,0 +1,14 @@
+node_modules
+
+# production
+build
+
+# next.js
+.next
+
+# misc
+.env
+.DS_Store
+
+# typescript
+next-env.d.ts
