@@ -5,6 +5,13 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "/",
+    "paths": {
+      "@utils/*": [ "utils/*" ],
+      "@config/*": [ "config/*" ],
+      "@types/*": [ "types/*" ],
+      "@components/*": [ "components/*" ],
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
