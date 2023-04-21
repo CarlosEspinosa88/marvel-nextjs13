@@ -1,11 +1,11 @@
-type Character = {
+export type Character = {
   id: number;
   name: string
 }
 
 export type Repository = {
-  status: string
-  code: number
+  code: number;
+  status: string;
   data: {
     results: Character[]
   }

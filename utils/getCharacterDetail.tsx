@@ -8,8 +8,8 @@ export async function getCharacterDetail(id: string) {
   const response: Repository = await fetching.json()
   
   return {
-    statusCode: response.code,
-    statusResponse: response.status,
-    data: response.data.results
+    code: response.code,
+    status: response.status,
+    data: response.data
   }
 }
