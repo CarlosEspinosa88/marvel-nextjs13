@@ -1,5 +1,5 @@
 import { Repository } from '../types'
-import { TS, LIMIT, OFFSET, QUERY,  URL, HASH, API_KEY } from '../config/constants'
+import { TS, LIMIT, OFFSET, QUERY,  URL, HASH, API_KEY } from '@config/constants'
 
 
 export async function getCharacterDetail(id: string) {

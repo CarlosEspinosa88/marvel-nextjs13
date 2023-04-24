@@ -1,6 +1,12 @@
 export type Character = {
   id: number;
-  name: string
+  name: string;
+  thumbnail: Thumbnail
+}
+
+export type Thumbnail = {
+  path: string;
+  extension: string;
 }
 
 export type Repository = {
