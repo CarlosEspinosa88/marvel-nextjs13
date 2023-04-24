@@ -1,0 +1,33 @@
+.container {
+  width: 280px;
+  min-height: 50vh;
+  max-height: 50vh;
+  border-radius: 10px;
+  background-color: rgb(173 173 173 / 10%);
+  box-shadow: 2px 2px 8px 1px rgb(0 0 0 / 14%);
+}
+
+.container_image {
+  display: block;
+}
+
+.container_info {
+  padding: 20px;
+}
+
+.container_image > img {
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.image {
+  width: 280px;
+  height: 250px;
+  max-height: 260px;
+}
+
+.title {
+  margin-top: 0;
+  font-family: 'Helvetica'
+}
