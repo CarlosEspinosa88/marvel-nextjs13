@@ -4,6 +4,11 @@ export type Character = {
   thumbnail: Thumbnail
 }
 
+export type Results = {
+  results: Character[]
+}
+
+
 export type Thumbnail = {
   path: string;
   extension: string;
@@ -12,9 +17,7 @@ export type Thumbnail = {
 export type Repository = {
   code: number;
   status: string;
-  data: {
-    results: Character[]
-  }
+  data: Results
 }
 
 export type CharacterId = {
