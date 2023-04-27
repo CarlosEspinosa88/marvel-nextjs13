@@ -1,9 +1,8 @@
 .container {
   width: 280px;
-  min-height: 50vh;
   max-height: 50vh;
   border-radius: 10px;
-  background-color: rgb(173 173 173 / 10%);
+  background-color: rgb(255 255 255 / 90%);
   box-shadow: 2px 2px 8px 1px rgb(0 0 0 / 14%);
 }
 
@@ -13,6 +12,11 @@
 
 .container_info {
   padding: 20px;
+}
+
+.container_info h3 {
+  color: #515151;
+  text-decoration: none;
 }
 
 .container_image > img {
@@ -29,5 +33,4 @@
 
 .title {
   margin-top: 0;
-  font-family: 'Helvetica'
 }
