@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import styles from './page.module.css';
 
 type ChildrenType = { 
   children: ReactNode
@@ -7,7 +8,14 @@ type ChildrenType = {
 export default function RootLayout({ children }: ChildrenType){
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={styles.body}>
+        <aside>
+          Hola
+        </aside>
+        <section>
+          {children}
+        </section>
+      </body>
     </html>
   );
 }

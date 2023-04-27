@@ -15,6 +15,11 @@
   padding: 20px;
 }
 
+.container_info h3 {
+  color: #515151;
+  text-decoration: none;
+}
+
 .container_image > img {
   object-fit: cover;
   border-top-left-radius: 10px;
@@ -29,5 +34,5 @@
 
 .title {
   margin-top: 0;
-  font-family: 'Helvetica'
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
