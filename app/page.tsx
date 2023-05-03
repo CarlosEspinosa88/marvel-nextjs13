@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Repository } from '../types'
 import { getCharacters } from '@utils/getCharacters'
+import SearchBox from "@components/SearchBox"
 import BoxCardLink from '@components/BoxCardLink'
 import styles from './page.module.css'
 
@@ -17,6 +18,7 @@ export default async function Page() {
       <h1 className={styles.title}>
         Marvel Hero Finder
       </h1> 
+      <SearchBox />
       {status === 'Ok' && code === 200 ? (
         <BoxCardLink results={data.results} />
       ) : (
