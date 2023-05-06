@@ -11,6 +11,7 @@
       "@config/*": [ "config/*" ],
       "@types/*": [ "types/*" ],
       "@components/*": [ "components/*" ],
+      "@hooks/*": [ "hooks/*" ],
     },
     "allowJs": true,
     "skipLibCheck": true,
