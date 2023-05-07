@@ -1,3 +1,5 @@
+import { ChangeEvent } from 'react'
+
 export type Character = {
   id: number;
   name: string;
@@ -24,4 +26,18 @@ export type CharacterId = {
   params: {
     id: string
   }
+}
+
+export type InputTypes = {
+  id: string,
+  label: string,
+  value: string,
+  placeholder: string,
+  maxLength: number,
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void
+}
+
+export type InputValues = {
+  inputValue: string
+  handleInputValue: (event: ChangeEvent<HTMLInputElement>) => void;
 }

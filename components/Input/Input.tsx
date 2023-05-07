@@ -1,13 +1,4 @@
-import { ChangeEvent } from 'react'
-
-type InputTypes = {
-  id: string,
-  label: string,
-  value: string,
-  placeholder: string,
-  maxLength: number,
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void
-}
+import { InputTypes } from '../../types'
 
 function Input({ 
   id,
