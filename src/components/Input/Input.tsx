@@ -1,4 +1,4 @@
-import { InputTypes } from '../../types'
+import { InputTypes } from '@customTypes/customTypes'
 
 function Input({ 
   id,

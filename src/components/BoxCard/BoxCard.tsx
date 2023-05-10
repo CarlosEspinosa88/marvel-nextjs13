@@ -1,4 +1,4 @@
-import { Character } from '../../types'
+import { Character } from '@customTypes/customTypes'
 import styles from './BoxCard.module.css'
 
 function BoxCard({ id, name, thumbnail }: Character) {

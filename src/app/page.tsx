@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Repository } from '../types'
+import { Repository } from '@customTypes/customTypes'
 import { getCharacters } from '@utils/getCharacters'
 import BoxCardLink from '@components/BoxCardLink'
 import styles from './page.module.css'

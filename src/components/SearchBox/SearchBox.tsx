@@ -1,5 +1,5 @@
 import Input from '@components/Input'
-import { InputValues } from '../../types'
+import { InputValues } from '@customTypes/customTypes'
 
 
 function SearchBox({ handleInputValue, inputValue }: InputValues) {
