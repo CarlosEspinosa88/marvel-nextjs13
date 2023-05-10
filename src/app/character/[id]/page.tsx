@@ -1,4 +1,4 @@
-import { CharacterId, Repository } from '../../../types'
+import { CharacterId, Repository } from '@customTypes/customTypes'
 import { getCharacterDetail } from '@utils/getCharacterDetail'
 import BoxCard from '@components/BoxCard'
 import styles from './character.module.css'

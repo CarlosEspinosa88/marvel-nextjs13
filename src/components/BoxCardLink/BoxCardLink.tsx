@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useState, useRef, ChangeEvent, useMemo } from "react"
-import { Character, Results } from '../../types'
+import { Character, Results } from '@customTypes/customTypes'
 import SearchBox from "@components/SearchBox"
 import styles from './BoxCardLink.module.css'
 

@@ -5,11 +5,11 @@
       "dom.iterable",
       "esnext"
     ],
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
       "@utils/*": [ "utils/*" ],
       "@config/*": [ "config/*" ],
-      "@types/*": [ "types/*" ],
+      "@customTypes/*": [ "customTypes/*" ],
       "@components/*": [ "components/*" ],
       "@hooks/*": [ "hooks/*" ],
     },
@@ -34,6 +34,7 @@
     ]
   },
   "include": [
+    "src",
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",

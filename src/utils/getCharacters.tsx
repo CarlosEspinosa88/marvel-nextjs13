@@ -1,4 +1,4 @@
-import { Repository } from '../types'
+import { Repository } from '@customTypes/customTypes'
 import { TS, LIMIT, OFFSET, QUERY,  URL, HASH, API_KEY } from '@config/constants'
 
 
