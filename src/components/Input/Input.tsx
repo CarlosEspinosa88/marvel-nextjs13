@@ -11,9 +11,9 @@ function Input({
 
   return (
     <div>
-      <p>
+      <label htmlFor={id}>
         {label}
-      </p>
+      </label>
       <input
         id={id}
         maxLength={maxLength}
