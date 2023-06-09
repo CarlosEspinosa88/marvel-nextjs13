@@ -10,7 +10,7 @@ function SearchBox({ handleInputValue, inputValue }: InputValues) {
         value={inputValue}
         label='Search'
         maxLength={10}
-        placeholder="Write here you heroe"
+        placeholder="Write here you hero"
         onChange={handleInputValue}
       /> 
     </div>

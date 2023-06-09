@@ -15,8 +15,8 @@ function BoxCardLink({ results }: Results) {
     setInputValue(event.target.value) 
   }
 
-  const filtereChar = useMemo(() => {
-    return characters.filter((heroe) => 
+  const filteredChar = useMemo(() => {
+    return characters.filter((heroe) =>
       heroe.name.toLowerCase() === inputValue.toLowerCase()
     )
 
@@ -26,8 +26,8 @@ function BoxCardLink({ results }: Results) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          if (filtereChar.length > 0 ) {
-            setCharacters(filtereChar)
+          if (filteredChar.length > 0 ) {
+            setCharacters(filteredChar)
           } else {
             setCharacters(results)
           }
@@ -41,16 +41,16 @@ function BoxCardLink({ results }: Results) {
 
     return () => observer.disconnect()
 
-  }, [results, filtereChar])
+  }, [results, filteredChar])
 
   return (
     <div>
       <SearchBox handleInputValue={handleInputValue} inputValue={inputValue} />
-      <div ref={node} className={styles.grid_container}>
+      <ul ref={node} className={styles.grid_container}>
         {characters.map((character) => (
-          <div key={character.id} className={styles.image_container}>
+          <li key={character.id} className={styles.image_container}>
             <Link href={`/character/${character.id}`}>
-              <div className={styles.image_wrapper}>
+              <figure className={styles.image_wrapper}>
                 <img
                   width="100%"
                   loading='lazy'
@@ -59,19 +59,16 @@ function BoxCardLink({ results }: Results) {
                   className={styles.image}
                   src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
                   />
-              </div>
-              <div className={styles.info_container}>
-                <h4 className={styles.title}>
-                  {character.name}
-                </h4>
-              </div>
+                <figcaption className={styles.info_container}>
+                    {character.name}
+                </figcaption>
+              </figure>
             </Link>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
-  )
-  
+  ) 
 }
 
 export default BoxCardLink
