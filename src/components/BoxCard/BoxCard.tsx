@@ -4,7 +4,7 @@ import styles from './BoxCard.module.css'
 function BoxCard({ id, name, thumbnail }: Character) {
   return (
     <div className={styles.container}>
-      <div className={styles.container_image}>
+      <figure className={styles.container_image}>
         <img
           width="100%"
           loading='lazy'
@@ -13,10 +13,10 @@ function BoxCard({ id, name, thumbnail }: Character) {
           className={styles.image}
           src={`${thumbnail.path}.${thumbnail.extension}`} 
           />
-      </div>
-      <div className={styles.container_info}>
-        <h3 className={styles.title}>Hello, {name}!</h3>
-      </div>
+        <figcaption className={styles.container_info}>
+          {name}
+        </figcaption>
+      </figure>
     </div>
   ) 
 }
