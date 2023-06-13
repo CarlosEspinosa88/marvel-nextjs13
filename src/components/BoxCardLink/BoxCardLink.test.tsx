@@ -1,13 +1,13 @@
 import { screen, render } from '@testing-library/react'
 import user from "@testing-library/user-event";
 import BoxCardLink from './BoxCardLink'
-import SearchBox from '../SearchBox'
 import '../../__mocks__/intersectionObserverMock';
 
-let dataMock = [
+const heroName = 'Spider-Man'
+const dataMock = [
   {
     id: 12,
-    name: 'Spiderman',
+    name: heroName,
     thumbnail: {
       path: 'spiderman',
       extension: 'jpg',
@@ -23,7 +23,6 @@ test('render <BoxCardLink />', () => {
 })
 
 test('render the new hero', async () => {
-  const heroName = 'spiderman'
   render(<BoxCardLink results={dataMock} />)
 
   const input = screen.getByRole('textbox', { name: /search/i })

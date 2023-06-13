@@ -10,22 +10,20 @@ test('render <SearchBox />', () => {
   expect(input).toBeInTheDocument()
 })
 
-test('handle the new value', async () => {
+test('handle the new value', () => {
+  const heroName = 'Spider-Man'
   const mock = jest.fn();
+  
   mock.mockImplementation((e) => {
-    expect(e.target.value).toBe('Spiderman');
+    expect(e.target.value).toBe(heroName);
   })
 
-  render(
-    <SearchBox
-      inputValue=''
-      handleInputValue={mock}
-    />
-  )
+  render(<SearchBox handleInputValue={mock} />)
 
   const input = screen.getByRole('textbox', { name: /search/i })
-  fireEvent.change(input , { target: { value: "Spiderman" } })
+  fireEvent.change(input , { target: { value: heroName } })
 
   expect(mock).toHaveBeenCalled()
   expect(mock).toHaveBeenCalledTimes(1)
+  expect(input).toHaveDisplayValue(heroName)
 })
