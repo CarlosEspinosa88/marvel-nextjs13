@@ -24,6 +24,7 @@
   border-radius: 10px;
   background-color: rgb(255 255 255 / 90%);
   box-shadow: 2px 2px 8px 1px rgb(0 0 0 / 14%);
+  list-style-type: none;
 }
 
 .image_container a {
