@@ -4,16 +4,15 @@ export type Characters = {
   characters: Character[]
 }
 
+export type Results = {
+  results: Character[]
+}
+
 export type Character = {
   id: number;
   name: string;
   thumbnail: Thumbnail
 }
-
-export type Results = {
-  results: Character[]
-}
-
 
 export type Thumbnail = {
   path: string;
@@ -41,7 +40,7 @@ export type InputTypes = {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
-export type InputValues = {
+export type SearchBoxTypes = {
   inputValue: string
   handleInputValue: (event: ChangeEvent<HTMLInputElement>) => void;
 }
