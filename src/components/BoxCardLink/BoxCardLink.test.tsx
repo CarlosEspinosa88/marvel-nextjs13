@@ -1,6 +1,5 @@
 import { screen, render } from '@testing-library/react'
-import user from "@testing-library/user-event";
-import BoxCardLink from './BoxCardLink'
+import BoxCardLink from './BoxCardLink';
 import '../../__mocks__/intersectionObserverMock';
 
 const heroName = 'Spider-Man'
@@ -15,21 +14,16 @@ const dataMock = [
   }
 ]
 
-test('render <BoxCardLink />', () => {
+test('show a input element in <BoxCardLink />', () => {
   render(<BoxCardLink results={dataMock} />)
 
   const input = screen.getByRole('textbox')
   expect(input).toBeInTheDocument()
 })
 
-test('render the new hero', async () => {
+test('show a list element in <BoxCardLink />', () => {
   render(<BoxCardLink results={dataMock} />)
 
-  const input = screen.getByRole('textbox', { name: /search/i })
-  await user.click(input)
-  await user.keyboard(heroName)
-
-
-  const list = await screen.findAllByRole('list')
-  expect(list).toHaveLength(1)
+  const list = screen.getByRole('list')
+  expect(list).toBeInTheDocument()
 })

@@ -4,10 +4,11 @@ import Link from "next/link"
 import { useEffect, useState, useRef, ChangeEvent, useMemo } from "react"
 import { Character, Results } from '@customTypes/customTypes'
 import SearchBox from "@components/SearchBox"
+import BoxLink from "@components/BoxLink"
 import styles from './BoxCardLink.module.css'
 
 function BoxCardLink({ results }: Results) {
-  const node = useRef<HTMLDivElement>(null)
+  const node = useRef<HTMLUListElement>(null)
   const [characters, setCharacters] = useState<Character[]>([])
   const [inputValue, setInputValue] = useState<string>('')
 
@@ -47,25 +48,7 @@ function BoxCardLink({ results }: Results) {
     <div>
       <SearchBox handleInputValue={handleInputValue} inputValue={inputValue} />
       <ul ref={node} className={styles.grid_container}>
-        {characters.map((character) => (
-          <li key={character.id} className={styles.image_container}>
-            <Link href={`/character/${character.id}`}>
-              <figure className={styles.image_wrapper}>
-                <img
-                  width="100%"
-                  loading='lazy'
-                  decoding="async"
-                  alt={character.name}
-                  className={styles.image}
-                  src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                  />
-                <figcaption className={styles.info_container}>
-                    {character.name}
-                </figcaption>
-              </figure>
-            </Link>
-          </li>
-        ))}
+        <BoxLink characters={characters} />
       </ul>
     </div>
   ) 

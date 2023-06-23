@@ -1,5 +1,9 @@
 import { ChangeEvent } from 'react'
 
+export type Characters = {
+  characters: Character[]
+}
+
 export type Character = {
   id: number;
   name: string;
