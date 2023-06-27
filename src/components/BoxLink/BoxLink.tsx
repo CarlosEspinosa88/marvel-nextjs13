@@ -8,7 +8,7 @@ function BoxLink({ characters }: Characters) {
     <>
       {characters.map((character) => (
         <li key={character.id} className={styles.image_container}>
-          <Link href={`/character/${character.id}`} aria-label={character.id}>
+          <Link href={`/character/${character.id}`} aria-label={character.id.toString()}>
             <BoxCard
               id={character.id}
               name={character.name}

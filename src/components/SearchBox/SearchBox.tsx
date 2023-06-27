@@ -1,8 +1,8 @@
 import Input from '@components/Input'
-import { InputValues } from '@customTypes/customTypes'
+import { SearchBoxTypes } from '@customTypes/customTypes'
 
 
-function SearchBox({ handleInputValue, inputValue }: InputValues) {
+function SearchBox({ handleInputValue, inputValue }: SearchBoxTypes) {
   return (
     <div>
       <Input 
