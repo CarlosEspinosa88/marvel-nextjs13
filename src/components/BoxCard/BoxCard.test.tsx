@@ -2,7 +2,7 @@ import { screen, render } from '@testing-library/react'
 import user from "@testing-library/user-event";
 import BoxCard from './BoxCard'
 
-let dataMock = {
+let character = {
   id: 56,
   name: 'Spider-Man',
   thumbnail: {
@@ -11,18 +11,18 @@ let dataMock = {
   }
 }
 
-test('render image and text in <BoxCard />', () => {
+test('show an image and text of hero', () => {
   render(
     <BoxCard 
-      id={dataMock.id}
-      name={dataMock.name}
-      thumbnail={dataMock.thumbnail}
+      id={character.id}
+      name={character.name}
+      thumbnail={character.thumbnail}
     />
   )
 
-  const image = screen.getByAltText(`${dataMock.id}-${dataMock.name}`)
-  const text = screen.getByText('spider', { exact: false})
+  const image = screen.getByAltText(`${character.id}-${character.name}`)
+  const text = screen.getByText(/spider/i)
 
   expect(image).toBeInTheDocument()
-  expect(text.textContent).toEqual(dataMock.name)
+  expect(text.textContent).toEqual(character.name)
 })

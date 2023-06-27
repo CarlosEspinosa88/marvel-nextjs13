@@ -3,4 +3,4 @@ const intersectionObserverMock = () => ({
   disconnect: () => null
 })
 
-window.IntersectionObserver = jest.fn().mockImplementation(intersectionObserverMock);
+window.IntersectionObserver = jest.fn(intersectionObserverMock);
