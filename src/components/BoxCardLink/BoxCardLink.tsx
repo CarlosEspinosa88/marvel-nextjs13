@@ -21,7 +21,7 @@ function BoxCardLink({ results }: Results) {
       heroe.name.toLowerCase() === inputValue.toLowerCase()
     )
 
-  }, [characters, inputValue, results])
+  }, [characters, inputValue])
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
