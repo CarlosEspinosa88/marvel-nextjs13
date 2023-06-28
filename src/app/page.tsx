@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { Repository } from '@customTypes/customTypes'
 import { getCharacters } from '@utils/getCharacters'
 import BoxCardLink from '@components/BoxCardLink'

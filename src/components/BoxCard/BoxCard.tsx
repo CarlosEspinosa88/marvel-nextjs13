@@ -1,12 +1,12 @@
 import { Character } from '@customTypes/customTypes'
 import styles from './BoxCard.module.css'
+import Image from 'next/image'
 
 function BoxCard({ id, name, thumbnail }: Character) {
   return (
     <div className={styles.container}>
       <figure className={styles.container_image}>
-        <img
-          width="100%"
+        <Image
           loading='lazy'
           decoding="async"
           alt={`${id}-${name}`}
