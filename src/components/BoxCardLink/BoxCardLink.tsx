@@ -1,10 +1,10 @@
 'use client'
 
-import Link from "next/link"
-import { useEffect, useState, useRef, ChangeEvent, useMemo } from "react"
+import Link from 'next/link'
+import { useEffect, useState, useRef, ChangeEvent, useMemo } from 'react'
 import { Character, Results } from '@customTypes/customTypes'
-import SearchBox from "@components/SearchBox"
-import BoxLink from "@components/BoxLink"
+import SearchBox from '@components/SearchBox'
+import BoxLink from '@components/BoxLink'
 import styles from './BoxCardLink.module.css'
 
 function BoxCardLink({ results }: Results) {
@@ -13,21 +13,20 @@ function BoxCardLink({ results }: Results) {
   const [inputValue, setInputValue] = useState<string>('')
 
   function handleInputValue(event: ChangeEvent<HTMLInputElement>) {
-    setInputValue(event.target.value) 
+    setInputValue(event.target.value)
   }
 
   const filteredChar = useMemo(() => {
-    return characters.filter((heroe) =>
-      heroe.name.toLowerCase() === inputValue.toLowerCase()
+    return characters.filter(
+      (heroe) => heroe.name.toLowerCase() === inputValue.toLowerCase(),
     )
-
   }, [characters, inputValue])
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          if (filteredChar.length > 0 ) {
+          if (filteredChar.length > 0) {
             setCharacters(filteredChar)
           } else {
             setCharacters(results)
@@ -41,7 +40,6 @@ function BoxCardLink({ results }: Results) {
     }
 
     return () => observer.disconnect()
-
   }, [results, filteredChar])
 
   return (
@@ -51,7 +49,7 @@ function BoxCardLink({ results }: Results) {
         <BoxLink characters={characters} />
       </ul>
     </div>
-  ) 
+  )
 }
 
 export default BoxCardLink

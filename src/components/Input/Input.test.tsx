@@ -1,5 +1,5 @@
 import { screen, render } from '@testing-library/react'
-import user from "@testing-library/user-event";
+import user from '@testing-library/user-event'
 import Input from './Input'
 
 const inputValues = {
@@ -8,34 +8,34 @@ const inputValues = {
   maxLength: 10,
   value: 'Carlos',
   placeholder: 'Escriba acá',
-  onChange: () => null
+  onChange: () => null,
 }
 
 test('render <Input />', () => {
   render(
-    <Input 
+    <Input
       id={inputValues.id}
       label={inputValues.label}
       maxLength={inputValues.maxLength}
-    />
+    />,
   )
 
   const input = screen.getByRole('textbox', { name: /my test/i })
-  expect(input).toBeInTheDocument();
+  expect(input).toBeInTheDocument()
 })
 
-test('get the input value', async () => {  
+test('get the input value', async () => {
   render(
-    <Input 
+    <Input
       id={inputValues.id}
       label={inputValues.label}
       maxLength={inputValues.maxLength}
       placeholder={inputValues.placeholder}
-    />
+    />,
   )
 
   const input = screen.getByRole('textbox', { name: /my test/i })
-  
+
   await user.click(input)
   await user.keyboard(inputValues.value)
 

@@ -1,13 +1,13 @@
-import Link from "next/link"
+import Link from 'next/link'
 
-export default function Page() {  
+export default function Page() {
   return (
     <div>
       <h1>Hello, About!</h1>
-      <Link href="/">
+      <Link href='/'>
         <h3>Go to Home!</h3>
       </Link>
-      <Link href="/blog">
+      <Link href='/blog'>
         <h3>Go to Blog!</h3>
       </Link>
     </div>

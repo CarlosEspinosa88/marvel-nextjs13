@@ -1,6 +1,6 @@
-import Link from "next/link"
+import Link from 'next/link'
 import styles from '../BoxCardLink/BoxCardLink.module.css'
-import BoxCard from "@components/BoxCard"
+import BoxCard from '@components/BoxCard'
 import { Characters } from '@customTypes/customTypes'
 
 function BoxLink({ characters }: Characters) {
@@ -8,12 +8,15 @@ function BoxLink({ characters }: Characters) {
     <>
       {characters.map((character) => (
         <li key={character.id} className={styles.image_container}>
-          <Link href={`/character/${character.id}`} aria-label={character.id.toString()}>
+          <Link
+            href={`/character/${character.id}`}
+            aria-label={character.id.toString()}
+          >
             <BoxCard
               id={character.id}
               name={character.name}
               thumbnail={character.thumbnail}
-              />
+            />
           </Link>
         </li>
       ))}

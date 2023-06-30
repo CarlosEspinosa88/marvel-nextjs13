@@ -1,6 +1,6 @@
 import { InputTypes } from '@customTypes/customTypes'
 
-function Input({ 
+function Input({
   id,
   label,
   value,
@@ -8,21 +8,18 @@ function Input({
   maxLength,
   onChange,
 }: InputTypes) {
-
   return (
     <div>
-      <label htmlFor={id}>
-        {label}
-      </label>
+      <label htmlFor={id}>{label}</label>
       <input
         id={id}
         maxLength={maxLength}
-        type="text"
+        type='text'
         value={value}
-        enterKeyHint="next"
+        enterKeyHint='next'
         placeholder={placeholder}
         onChange={onChange}
-      /> 
+      />
     </div>
   )
 }

@@ -3,8 +3,7 @@ import { getCharacterDetail } from '@utils/getCharacterDetail'
 import BoxCard from '@components/BoxCard'
 import styles from './character.module.css'
 
-
-export default async function Page({ params }: CharacterId) { 
+export default async function Page({ params }: CharacterId) {
   const { data, status, code }: Repository = await getCharacterDetail(params.id)
 
   return status === 'Ok' && code === 200 ? (
