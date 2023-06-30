@@ -9,19 +9,19 @@ export type Results = {
 }
 
 export type Character = {
-  id: number;
-  name: string;
+  id: number
+  name: string
   thumbnail: Thumbnail
 }
 
 export type Thumbnail = {
-  path: string;
-  extension: string;
+  path: string
+  extension: string
 }
 
 export type Repository = {
-  code: number;
-  status: string;
+  code: number
+  status: string
   data: Results
 }
 
@@ -32,15 +32,15 @@ export type CharacterId = {
 }
 
 export type InputTypes = {
-  id: string,
-  label: string,
-  value: string,
-  placeholder: string,
-  maxLength: number,
+  id: string
+  label: string
+  value: string
+  placeholder: string
+  maxLength: number
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
 export type SearchBoxTypes = {
   inputValue: string
-  handleInputValue: (event: ChangeEvent<HTMLInputElement>) => void;
+  handleInputValue: (event: ChangeEvent<HTMLInputElement>) => void
 }

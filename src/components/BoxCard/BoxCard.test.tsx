@@ -1,5 +1,5 @@
 import { screen, render } from '@testing-library/react'
-import user from "@testing-library/user-event";
+import user from '@testing-library/user-event'
 import BoxCard from './BoxCard'
 
 let character = {
@@ -8,16 +8,16 @@ let character = {
   thumbnail: {
     path: 'spiderman',
     extension: 'jpg',
-  }
+  },
 }
 
 test('show an image and text of hero', () => {
   render(
-    <BoxCard 
+    <BoxCard
       id={character.id}
       name={character.name}
       thumbnail={character.thumbnail}
-    />
+    />,
   )
 
   const image = screen.getByAltText(`${character.id}-${character.name}`)

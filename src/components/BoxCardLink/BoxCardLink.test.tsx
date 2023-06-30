@@ -1,6 +1,6 @@
 import { screen, render } from '@testing-library/react'
-import BoxCardLink from './BoxCardLink';
-import '../../__mocks__/intersectionObserverMock';
+import BoxCardLink from './BoxCardLink'
+import '../../__mocks__/intersectionObserverMock'
 
 const heroName = 'Spider-Man'
 const dataMock = [
@@ -10,8 +10,8 @@ const dataMock = [
     thumbnail: {
       path: 'spiderman',
       extension: 'jpg',
-    }
-  }
+    },
+  },
 ]
 
 test('show a input element in <BoxCardLink />', () => {

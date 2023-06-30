@@ -5,7 +5,6 @@ export default function useGetCharacterInput(results: Character[]) {
   const [characters, setCharacters] = useState<Character[]>(results)
 
   return {
-    characters
+    characters,
   }
-  
 }

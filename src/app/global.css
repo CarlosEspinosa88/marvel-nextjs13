@@ -3,7 +3,8 @@
   --tw-bg-opacity: 0.7;
 }
 
-*::before, *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -12,7 +13,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   isolation: isolate;
   height: 100%;
 }
@@ -21,21 +23,32 @@ body {
   line-height: 1.5;
   font-family: 'Helvetica Neue';
   -webkit-font-smoothing: antialiased;
-  background-color: rgb(234 234 234/var(--tw-bg-opacity));
+  background-color: rgb(234 234 234 / var(--tw-bg-opacity));
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
   color: var(--theme-color);
 }
-
-
